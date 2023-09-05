@@ -325,9 +325,69 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #333; /* Color de fondo de la barra de reproducción */
+    background-color: black; /* Color de fondo de la barra de reproducción */
     color: white; /* Color del texto */
     text-align: center;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-artista-cancion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.name-song {
+    text-align: left;
+}
+
+.center-audio-tools {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+}
+.music-tools {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin: auto;
+}
+.music-tools button {
+    background-color: none;
+    border-radius: 50%;
+    gap: 10px;
+}
+
+.time-song {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.progress-bar {
+    background-color: #7e7e7e; /* Fondo gris de la barra de progreso */
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+}
+
+.progress {
+    background-color: #f1f1f1; /* Color de la barra de progreso */
+    width: 20%; /* Cambia este valor para simular el progreso */
+    height: 100%;
+    border-radius: 5px;
+}
+
+
+.right-tools {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 40px;
 }
 
 .audio {
