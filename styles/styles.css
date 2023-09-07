@@ -51,6 +51,8 @@ body {
 	color: rgba(255, 255, 255, 0.927);
 	padding-left: var(--padding-content);
 	padding-right: var(--padding-content);
+	margin-top: 2vh;
+	margin-bottom: 20px;
 }
 .nav-top div h1{
 	font-size: 2rem;
@@ -68,6 +70,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	margin-bottom: 25px;
 }
 .hashtags {
 	display: flex;
@@ -95,8 +98,7 @@ body {
 }
 .contenedor-playlist {
 	display: flex;
-	/* align-items: center; */
-	background-color: #141414c6;
+	background-color: #2d2c2cc6;
     text-align: center;
 	gap: 10px;
 	color: white;
