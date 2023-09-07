@@ -3,27 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clon Spotify</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="styles/styles.css">
+    <title>Clon Spotify</title>
 </head>
 <body>
     <main class="main container">
-        <!-- TopBar -->
-        <div class="topbar">
-            <div class="container-arrows">
-                <div class="container-arrow-left">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </div>
-                <div class="container-arrow-right">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </div>
-            </div>
-            <div class="buttons-user">
-                <a href="#" class="btn-register">Registrarte</a>
-                <a href="#" class="btn-login btn-full">Iniciar sesión</a>
-            </div>
-        </div>
         <!-- SideBar -->
         <nav class="navbar">
             <div class="container-logo">
@@ -88,13 +75,125 @@
                 </button>
             </div>
         </nav>
-
+        <nav class="nav-mobile">
+            <ul class="nav-main-mobile">
+                <li>
+                    <div>
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <div>
+                       <h1>Inicio</h1> 
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div>
+                       <h1>Buscar</h1> 
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <i class="fa-solid fa-bookmark"></i>
+                    </div>
+                    <div>
+                       <h1>Tu biblioteca</h1> 
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        
         <!-- Contenido Principal -->
         <section class="main-content">
+             <!-- TopBar -->
+        <div class="topbar">
+            <div class="container-arrows">
+                <div class="container-arrow-left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="container-arrow-right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="buttons-user">
+                <a href="#" class="btn-register">Registrarte</a>
+                <a href="#" class="btn-login btn-full">Iniciar sesión</a>
+            </div>
+        </div>
+        <!-- Nav mobile con mis playlist -->
+        <nav class="nav-top">
+            <div>
+                <h1>Buenas tardes</h1>
+            </div>
+            <div class="cont-icons">
+                <div><i class='bx bx-bell' ></i></div>
+                <div><i class='bx bxs-timer' ></i></div>
+                <div><i class='bx bx-cog'></i></div>
+            </div>
+        </nav>
+        <div class="mis-playlist">
+            <div class="hashtags">
+                <div>Música</div>
+                <div>Podcasts y programas</div>
+            </div>
+
+            <div class="cont-mis-playlist">
+                <div class="contenedor-playlist">
+                    <div>
+                        <img aria-hidden="false" draggable="false" loading="lazy" src="https://mosaic.scdn.co/640/ab67616d00001e0232630fe83750d8db0b2b2d5cab67616d00001e0252a52eac3761e2133bd0f57aab67616d00001e0277ec4341ebb8a0dbfe2df739ab67616d00001e02efc1b8f6beda4abe848a84e0" data-testid="shortcut-image" alt="" class="mMx2LUixlnN_Fu45JpFB WWDxafTPs4AgThdcX5jN Yn2Ei5QZn19gria6LjZj">
+                    </div>
+                    <div class="nombre-playlist">
+                        <h1>Playlist 1</h1>
+                    </div>
+                </div>
+                <div class="contenedor-playlist">
+                    <div>
+                        <img aria-hidden="false" draggable="false" loading="lazy" src="https://t.scdn.co/images/3099b3803ad9496896c43f22fe9be8c4.png" data-testid="shortcut-image" alt="" class="mMx2LUixlnN_Fu45JpFB WWDxafTPs4AgThdcX5jN Yn2Ei5QZn19gria6LjZj">
+                    </div>
+                    <div class="nombre-playlist">
+                        <h1>Tus me gusta</h1>
+                    </div>
+                </div>
+                <div class="contenedor-playlist">
+                    <div>
+                        <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67706c0000da8495cb5b41e1967d3bc0e3ceb7" data-testid="shortcut-image" alt="" class="mMx2LUixlnN_Fu45JpFB WWDxafTPs4AgThdcX5jN Yn2Ei5QZn19gria6LjZj">
+                    </div>
+                    <div class="nombre-playlist">
+                        <h1>Playlist 2</h1>
+                    </div>
+                </div>
+                <div class="contenedor-playlist">
+                    <div>
+                        <img aria-hidden="false" draggable="false" loading="lazy" src="https://mosaic.scdn.co/640/ab67616d00001e02aa9c7cb06195bda7a55d9fd0ab67616d00001e02af8f93114781f45a43c7f7c1ab67616d00001e02bfd0c5fc77ce47d1623fcfd7ab67616d00001e02f68e7629f2d12c7d2380b074" data-testid="shortcut-image" alt="" class="mMx2LUixlnN_Fu45JpFB WWDxafTPs4AgThdcX5jN Yn2Ei5QZn19gria6LjZj">
+                    </div>
+                    <div class="nombre-playlist">
+                        <h1>Playlist 3</h1>
+                    </div>
+                </div>
+                <div class="contenedor-playlist">
+                    <div>
+                        <img aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab6761610000e5eb2aa71241ff5532e3ceeb86a1" data-testid="shortcut-image" alt="" class="mMx2LUixlnN_Fu45JpFB WWDxafTPs4AgThdcX5jN Yn2Ei5QZn19gria6LjZj">
+                    </div>
+                    <div class="nombre-playlist">
+                        <h1>Ozuna</h1>
+                    </div>
+                </div>
+                <div class="contenedor-playlist">
+                    <div>
+                        <img aria-hidden="false" draggable="false" loading="lazy" src="https://seed-mix-image.spotifycdn.com/v6/img/forro/5x1X6tMrU5IyYoX8Ro7ey8/es-419/default" data-testid="shortcut-image" alt="" class="mMx2LUixlnN_Fu45JpFB WWDxafTPs4AgThdcX5jN Yn2Ei5QZn19gria6LjZj">
+                    </div>
+                    <div class="nombre-playlist">
+                        <h1>Playlist 5</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------------- -->
             <!-- 1 Fila -->
             <div class="container-name-concentracion">
                 <h1 class="title-playlist">Hecho para vos</h1>
-                <div class="container-card-concentracion">
+                <div class="container-card-concentracion slider">
                     <div class="card-concentracion">
                         <div class="card">
                             <div class="card-img">
@@ -154,7 +253,7 @@
 
             <div class="container-name-concentracion">
                 <h1 class="title-playlist">Tus mixes más escuchados</h1>
-                <div class="container-card-concentracion">
+                <div class="container-card-concentracion slider">
                     <div class="card-concentracion">
                         <div class="card">
                             <div class="card-img">
@@ -214,7 +313,7 @@
 
             <div class="container-name-concentracion">
                 <h1 class="title-playlist">Programas para descrubrir</h1>
-                <div class="container-card-concentracion">
+                <div class="container-card-concentracion slider">
                     <div class="card-concentracion">
                         <div class="card">
                             <div class="card-img">
@@ -260,12 +359,21 @@
                             <p>Verika Pérez</p>
                         </div>
                     </div>
+                    <div class="card-concentracion">
+                        <div class="card">
+                            <div class="card-img">
+                                <img aria-hidden="false" draggable="false" loading="eager" src="https://i.scdn.co/image/ab67656300005f1f43d6ba476d8c8b8347e736e0" alt="La Cruda" class="mMx2LUixlnN_Fu45JpFB CmkY1Ag0tJDfnFXbGgju _EShSNaBK1wUIaZQFJJQ YbDIZ84mS7tzHr1tgWE9 Yn2Ei5QZn19gria6LjZj" srcset="https://i.scdn.co/image/ab67656300005f1f43d6ba476d8c8b8347e736e0 150w, https://i.scdn.co/image/ab67656300005f1f43d6ba476d8c8b8347e736e0 300w, https://i.scdn.co/image/ab6765630000ba8a43d6ba476d8c8b8347e736e0 320w, https://i.scdn.co/image/ab6765630000ba8a43d6ba476d8c8b8347e736e0 640w" sizes="(min-width: 1280px) 232px, 192px">
+                            </div>
+                            <h2>La Cruda</h2>
+                            <p>Spotify Studios</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="container-name-concentracion">
                 <h1 class="title-playlist">Pop</h1>
-                <div class="container-card-concentracion">
+                <div class="container-card-concentracion slider">
                     <div class="card-concentracion">
                         <div class="card">
                             <div class="card-img">
@@ -305,6 +413,15 @@
                     <div class="card-concentracion">
                         <div class="card">
                             <div class="card-img">
+                                <img aria-hidden="false" draggable="false" loading="eager" src="https://i.scdn.co/image/ab67706f00000002c4a2babf91af9326e6d301a2" alt="Buen Día :)" class="mMx2LUixlnN_Fu45JpFB CmkY1Ag0tJDfnFXbGgju _EShSNaBK1wUIaZQFJJQ Yn2Ei5QZn19gria6LjZj" sizes="(min-width: 1280px) 232px, 192px">
+                            </div>
+                            <h2>Buen Día :)</h2>
+                            <p>Ja Red</p>
+                        </div>
+                    </div>
+                    <div class="card-concentracion">
+                        <div class="card">
+                            <div class="card-img">
                                 <img aria-hidden="false" draggable="false" loading="eager" src="https://i.scdn.co/image/ab67706f0000000221a3e151c9563c5e1efd3064" alt="Ruta 2" class="mMx2LUixlnN_Fu45JpFB CmkY1Ag0tJDfnFXbGgju _EShSNaBK1wUIaZQFJJQ Yn2Ei5QZn19gria6LjZj" sizes="(min-width: 1280px) 232px, 192px">
                             </div>
                             <h2>Ruta 2</h2>
@@ -316,7 +433,7 @@
 
             <div class="container-name-concentracion">
                 <h1 class="title-playlist">En tendencia</h1>
-                <div class="container-card-concentracion">
+                <div class="container-card-concentracion slider">
                     <div class="card-concentracion">
                         <div class="card">
                             <div class="card-img">
@@ -362,12 +479,21 @@
                             <p>Lo mas potente del rock argentino, y algunos invitados de lujo.</p>
                         </div>
                     </div>
+                    <div class="card-concentracion">
+                        <div class="card">
+                            <div class="card-img">
+                                <img aria-hidden="false" draggable="false" loading="eager" src="https://i.scdn.co/image/ab67706f00000002f4f3a1dd36b8a39bbc7a6e4f" alt="Esto es Cumbia" class="mMx2LUixlnN_Fu45JpFB CmkY1Ag0tJDfnFXbGgju _EShSNaBK1wUIaZQFJJQ Yn2Ei5QZn19gria6LjZj" sizes="(min-width: 1280px) 232px, 192px">
+                            </div>
+                            <h2>Esto es cumbia</h2>
+                            <p>y de la buena!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="container-name-concentracion">
                 <h1 class="title-playlist">Trap</h1>
-                <div class="container-card-concentracion">
+                <div class="container-card-concentracion slider">
                     <div class="card-concentracion">
                         <div class="card">
                             <div class="card-img">
@@ -411,6 +537,15 @@
                             </div>
                             <h2>Trap ❤️</h2>
                             <p></p>
+                        </div>
+                    </div>
+                    <div class="card-concentracion">
+                        <div class="card">
+                            <div class="card-img">
+                                <img aria-hidden="false" draggable="false" loading="eager" src="https://i.scdn.co/image/ab67706f00000002e9057e7309351752216eec43" alt="BARRAS" class="mMx2LUixlnN_Fu45JpFB CmkY1Ag0tJDfnFXbGgju _EShSNaBK1wUIaZQFJJQ Yn2Ei5QZn19gria6LjZj" sizes="(min-width: 1280px) 232px, 192px">
+                            </div>
+                            <h2>BARRAS</h2>
+                            <p>Drill, trap y todo lo que tenga mas barras que una panaderia.</p>
                         </div>
                     </div>
                 </div>
@@ -507,6 +642,11 @@
     </main>
 
 
+  <!--Slider  -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--  -->
     <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="js/index.js"></script>
