@@ -26,30 +26,8 @@ $(document).ready(function(){
   
   });
 
-  let topBar = document.querySelector('.topbar');
-
-
-let anchoPagina = window.innerWidth;
-
-window.addEventListener('scroll', () => {
-	if(anchoPagina>700) {
-		if (window.scrollY > 0) {
-			topBar.classList.add('transparent');
-		} else {
-			topBar.classList.remove('transparent');
-		}
-	}
-});
-
-let topbarHeight = topBar.offsetHeight;
-
-let mainContent = document.querySelector('.main-content');
-mainContent.style.paddingTop = `${topbarHeight + 20}px`;
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-	// Nav mobile 
+  // Nav mobile 
+	document.addEventListener("DOMContentLoaded", function() {
 	let navItems = document.querySelectorAll(".nav-main-mobile li");
 
     
@@ -76,5 +54,61 @@ document.addEventListener("DOMContentLoaded", function() {
 	hashtagsDivs[0].classList.add("activeHash");
 
 });
+
+
+
+// Nav al scrollear
+let topBar = document.querySelector('.topbar');
+let fondoNavPlaylist = document.querySelector('.fondo-nav-playlist');
+let anchoPagina = window.innerWidth;
+let randomColor = "";
+
+window.addEventListener('scroll', () => {
+  if (anchoPagina > 700) {
+    // Obtén la posición y altura del fondo-nav-playlist
+    let fondoNavPlaylistRect = fondoNavPlaylist.getBoundingClientRect();
+    let fondoNavPlaylistBottom = fondoNavPlaylistRect.bottom;
+	console.log(fondoNavPlaylistRect);
+	console.log(fondoNavPlaylistBottom);
+
+    // Compara la posición del scroll con la posición del fondo-nav-playlist
+    if (window.scrollY > fondoNavPlaylistBottom +200) {
+      topBar.style.background = randomColor;
+    } else {
+      topBar.style.background = 'none';
+    }
+  }
+});
+
+let topbarHeight = topBar.offsetHeight;
+let mainContent = document.querySelector('.main-content');
+mainContent.style.paddingTop = `${topbarHeight + 20}px`;
+
+
+// Cambiar el color de dondo del nav y playlist PC
+let contenedoresPlaylist = document.querySelectorAll('.contenedor-playlist');
+let fondo = document.querySelector('.fondo-nav-playlist');
+
+contenedoresPlaylist.forEach(contenedor => {
+contenedor.addEventListener('mouseenter', () => {
+	 randomColor = getRandomColor();
+	fondo.style.background = `linear-gradient(to bottom, ${randomColor}, transparent)`;
+	if (window.scrollY > fondoNavPlaylistBottom +200) {
+	topBar.style.background = randomColor;
+	}
+});
+
+});
+
+function getRandomColor() {
+	let letters = '0123456789ABCDEF';
+	let color = '#';
+	for (let i = 0; i < 6; i++) {
+		color += letters[Math.floor(Math.random() * 16)];
+	}
+	return color;
+	}
+
+
 
 
