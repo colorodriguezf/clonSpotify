@@ -88,14 +88,17 @@ mainContent.style.paddingTop = `${topbarHeight + 20}px`;
 // Cambiar el color de dondo del nav y playlist PC
 let contenedoresPlaylist = document.querySelectorAll('.contenedor-playlist');
 let fondo = document.querySelector('.fondo-nav-playlist');
-
+let anchoPantalla = "";
 contenedoresPlaylist.forEach(contenedor => {
+	anchoPantalla = window.innerWidth;
 contenedor.addEventListener('mouseenter', () => {
+	if (anchoPantalla > 1000) {
 	 randomColor = getRandomColor();
 	fondo.style.background = `linear-gradient(to bottom, ${randomColor}, transparent)`;
 	if (window.scrollY > fondoNavPlaylistBottom +200) {
-	topBar.style.background = randomColor;
+	topBar.style.background = `linear-gradient(to bottom, ${randomColor}, transparent)`;
 	}
+ }
 });
 
 });
