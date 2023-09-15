@@ -93,6 +93,16 @@ body {
 	color: white;
 	padding-left: var(--padding-content);
 	gap: 10px;
+	position: relative;
+}
+.hashtags.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+	z-index: 9999;
+	padding: 8px;
 }
 .hashtags div {
 	border-radius: 100px;

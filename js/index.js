@@ -95,6 +95,7 @@ contenedor.addEventListener('mouseenter', () => {
 	if (anchoPantalla > 1000) {
 	 randomColor = getRandomColor();
 	fondo.style.background = `linear-gradient(to bottom, ${randomColor}, transparent)`;
+	topBar.style.background = `linear-gradient(to bottom, ${randomColor}, transparent)`;
 	if (window.scrollY > fondoNavPlaylistBottom +200) {
 	topBar.style.background = `linear-gradient(to bottom, ${randomColor}, transparent)`;
 	}
@@ -111,6 +112,22 @@ function getRandomColor() {
 	}
 	return color;
 	}
+
+
+
+
+// Menu fixed mobile
+let hashtags = document.querySelector(".hashtags");
+
+let offsetTop = hashtags.offsetTop;
+//Si el scroll es mayor a la posicion del div
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset > offsetTop) {
+        hashtags.classList.add("fixed");
+    } else {
+        hashtags.classList.remove("fixed");
+    }
+});
 
 
 
